@@ -62,3 +62,6 @@ endif
 
 " 打开文件时跳到上次编辑的位置
 autocmd BufReadPost * call handy#JumpToLatest()
+
+" 用表达式来定义层叠
+set foldmethod=marker
