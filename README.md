@@ -1,4 +1,4 @@
-# PerfectWorks 的 Vim 配置以及插件
+# justzero 的 Vim 配置以及插件
 作者日常工作环境为 Linux，经常编辑 JavaScript/HTML/CSS/Python/Shell 文件，因此大部分插件都是为这些文件进行优化。
 
 这份配置对 Vim 的修改不多，每个修改都有详细的注释说明，对初学者比较友好。
