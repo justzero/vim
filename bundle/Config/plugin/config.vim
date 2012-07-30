@@ -1,5 +1,5 @@
 " 色彩主题
-colo underwater
+colo molokai
 if $TERM == "xterm-256color"
     set t_Co=256 " 256 色
 endif
@@ -65,3 +65,8 @@ autocmd BufReadPost * call handy#JumpToLatest()
 
 " 用表达式来定义层叠
 set foldmethod=marker
+
+"高亮当前行
+set cursorline
+set cursorcolumn
+
