@@ -55,6 +55,8 @@ nmap <F9> :call handy#ToggleSnipple()<CR>
 
 " 更方便的 <Esc>
 imap <silent> ii <esc>:w<cr>
+imap <silent> <C-h> <esc>i
+imap <silent> <C-l> <esc>la
 imap <silent> oo <esc>ko
 map <silent> <esc><esc> :close<cr>
 map <silent> <tab><tab> <C-w>w

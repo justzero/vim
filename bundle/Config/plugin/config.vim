@@ -37,6 +37,8 @@ set showcmd
 set nobackup
 " 高亮当前行
 set cursorline
+" 高亮当前列
+set cursorcolumn
 " 智能大小写判断
 set ignorecase smartcase
 " 语法高亮
@@ -65,8 +67,3 @@ autocmd BufReadPost * call handy#JumpToLatest()
 
 " 用表达式来定义层叠
 set foldmethod=marker
-
-"高亮当前行
-set cursorline
-set cursorcolumn
-
