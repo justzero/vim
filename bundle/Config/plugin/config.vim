@@ -3,7 +3,6 @@ colo molokai
 if $TERM == "xterm-256color"
     set t_Co=256 " 256 色
 endif
-
 " 关闭兼容模式
 set nocompatible
 " 开启魔法匹配
@@ -67,3 +66,10 @@ autocmd BufReadPost * call handy#JumpToLatest()
 
 " 用表达式来定义层叠
 set foldmethod=marker
+
+
+set	list		"显示不可见字符 默认的太不好看了
+"set listchars=tab:\|\ ,trail:.,extends:>,precedes:<
+set listchars=tab:\:\ ,trail:~,extends:>,precedes:<,nbsp:\.
+set colorcolumn=80,120	"显示right margin, 7.3+
+
