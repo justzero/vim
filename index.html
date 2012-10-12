@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Vim : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Vim</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/justzero/vim">View on GitHub</a>
+
+          <h1 id="project_title">Vim</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/justzero/vim/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/justzero/vim/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>justzero 的 Vim 配置以及插件</h1>
+
+<p>作者日常工作环境为 Linux，经常编辑 JavaScript/HTML/CSS/Python/Shell 文件，因此大部分插件都是为这些文件进行优化。</p>
+
+<p>这份配置对 Vim 的修改不多，每个修改都有详细的注释说明，对初学者比较友好。</p>
+
+<p>尽管作者对该配置的多平台兼容性有一定处理，但因为每人的使用习惯都不一致，所以并不建议直接使用该配置文件作为生产配置使用，而是建议将该项目 fork 出一个自己的版本来维护。</p>
+
+<p>有更多问题，欢迎直接联系作者。</p>
+
+<h2>安装</h2>
+
+<h3>*nix</h3>
+
+<p>在 $HOME 目录下执行以下命令</p>
+
+<pre><code>git clone git://github.com/perfectworks/vim.git ~/.vim
+cd ~/.vim &amp;&amp; ./install.sh
+</code></pre>
+
+<h3>Windows</h3>
+
+<p>在 %HOME% 目录下执行</p>
+
+<pre><code>git clone git://github.com/perfectworks/vim.git %HOME%/.vim
+cd %HOME%/.vim &amp;&amp; install.bat
+</code></pre>
+
+<h2>升级</h2>
+
+<p>在 .vim 目录下执行以下命令</p>
+
+<pre><code>git pull
+</code></pre>
+
+<p>升级插件</p>
+
+<pre><code>git submodule foreach "git checkout master &amp;&amp; git pull"
+</code></pre>
+
+<h2>配置修改</h2>
+
+<p>大部分的自定义修改都在 <code>bundle/Config</code> 这个 bundle 里面</p>
+
+<ul>
+<li>Vim 本身配置修改一般在 <code>bundle/Config/plugin/config.vm</code>
+</li>
+<li>快捷键修改一般在 <code>bundle/Config/plugin/shortcut.vim</code>
+</li>
+<li>对插件的配置会在 <code>bundle/Config/plugin/插件名.vim</code>
+</li>
+</ul><h3>自定义快捷键</h3>
+
+<p>大部分自定义快捷键都在 <code>bundle/Config/plugin/shortcut.vim</code> 中配置，<code>&lt;Leader&gt;</code> 键被映射为 <code>\</code></p>
+
+<ul>
+<li>Normal 模式
+
+<ul>
+<li>
+<code>gp</code>: 粘贴最近一次 yank 操作的文字 (比如 yy 之后又 dd 了，可以用 gp 来粘贴 yy 的结果)</li>
+<li>
+<code></code>/<code></code>: 在分屏模式下放大 / 缩小当前窗口</li>
+<li>
+<code>&lt;Leader&gt;nt</code>: 打开 NerdTree</li>
+<li>
+<code>&lt;Leader&gt;nf</code> :打开 NerdTree 并且将光标跳转到现在编辑的文件 (nt 的意思是 Nerdtree Find)</li>
+<li>
+<code>&lt;Leader&gt;m</code>: 调用系统 make</li>
+<li>
+<code>&lt;Leader&gt;sh</code>: 打开系统 shell (打开 shell 之后退出会跳回 vim)</li>
+<li>
+<code>&lt;F3&gt;</code>: 在当前目录以及子文件夹中搜索特定关键字 (搜索支持 Vim 正则, 默认会搜索 <code>&amp;lt;关键字&gt;&gt;</code>，如果要取消左右的 <code>&amp;lt;&amp;gt;</code>，可以输入 <code>/关键字</code>)</li>
+<li>
+<code>&lt;F6&gt;</code>: 切换粘贴模式</li>
+<li>
+<code>&lt;F5&gt;</code>: 切换显示行号</li>
+<li>
+<code>&lt;F7&gt;</code>/<code>&lt;F8&gt;</code>: 跳到上一条/下一条 quickfix 记录，配合 <code>&lt;F3&gt;</code> 可以在搜索结果中快速跳转</li>
+<li>
+<code>&lt;F9&gt;</code>: 快速编辑 Snippet，在 Snippet 中按 <code>&lt;F9&gt;</code> 会保存当前 Snippet，刷新 snipMate 缓存并返回刚刚编辑的文件</li>
+<li>
+<code>&lt;F10&gt;</code>: 打开 TagBar</li>
+<li>
+<code>&lt;Ctrl&gt;-l</code>: 清除高亮并且重绘屏幕</li>
+<li>
+<code>&lt;Ctrl&gt;-_</code>: 分屏模式下当前窗口最大化</li>
+<li>
+<code>t`</code>: 跳转到下一个大写字母 (驼峰式跳转)</li>
+</ul>
+</li>
+<li>CommandLine 模式
+
+<ul>
+<li>
+<code>&lt;Ctrl&gt;-a</code>: 跳到命令行开始</li>
+<li>
+<code>&lt;Ctrl&gt;-e</code>: 跳到命令行结束</li>
+</ul>
+</li>
+<li>Insert 模式
+
+<ul>
+<li>ii: 退出到 Norm 模式并保存文件</li>
+</ul>
+</li>
+<li>FuzzyFinder
+
+<ul>
+<li>参考插件列表中 FuzzyFinder 的介绍</li>
+</ul>
+</li>
+</ul><h2>插件</h2>
+
+<h3>插件列表</h3>
+
+<p>插件介绍请 Google</p>
+
+<ul>
+<li>FuzzyFinder
+
+<ul>
+<li>强大的文件查找工具 (替换了 Command-T 以及 MRU)，主要快捷键映射有</li>
+<li>
+<code>&lt;space&gt;</code> 搜索 Buffer (以前的版本中这个快捷键是 BufExplorer)</li>
+<li>
+<code>&lt;Ctrl&gt;-j</code> 搜索文件 (替换掉了 Command-T)</li>
+<li>
+<code>&lt;F12&gt;</code> 在最近打开的文件中搜索 (以前版本中这个快捷键是 MRU)</li>
+<li>
+<code>&lt;leader&gt;fr</code> 更新 Cache (:FufRenewCache)</li>
+</ul>
+</li>
+<li>nerdcommenter 快速给代码加注释</li>
+<li>vim-surround 修改一段代码周围的引号、括号等</li>
+<li>CmdlineComplete 给命令行提供补全功能</li>
+<li>bufexplorer 提供 Buffer 列表</li>
+<li>zencoding-vim
+
+<ul>
+<li>快捷键是 <code>&lt;Ctrl&gt;-k</code>
+</li>
+</ul>
+</li>
+<li>nerdtree 查看目录树
+
+<ul>
+<li>设置了过滤 pyc 文件</li>
+</ul>
+</li>
+<li>fencview 增强 vim 的编码检测</li>
+<li>vim-markdown 高亮 markdown 格式</li>
+<li>snipmate 代码补全</li>
+<li>jslint js 语法校验</li>
+<li>tagbar js 代码大纲视图</li>
+<li>Gist 分享代码到 github 的小工具</li>
+<li>vim-repeat 增强 vim 的 repeat 功能</li>
+<li>web-indent JavaScript 的语法缩进</li>
+<li>jsbeautify JavaScript 代码格式化，快捷键是 <code>&lt;Leader&gt;ff</code>
+</li>
+<li>Scrath 打开一个临时的缓冲区随便记录东西，快捷键是 <code>&lt;Leader&gt;S</code>
+</li>
+<li>genutils 给 vim 添加一些函数库</li>
+<li>molokai 配色</li>
+<li>desertEx 配色</li>
+</ul><h3>安装新插件</h3>
+
+<p>在 <code>.vim</code> 目录下执行</p>
+
+<pre><code>git submodule add '插件的 github 检出地址' 'bundle/插件名'
+git submodule init
+git submodule update
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Vim maintained by <a href="https://github.com/justzero">justzero</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
