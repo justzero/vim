@@ -82,3 +82,6 @@
 [submodule "bundle/JSON"]
 	path = bundle/JSON
 	url = https://github.com/vim-scripts/JSON.vim.git
+[submodule "bundle/vim-calendar"]
+	path = bundle/vim-calendar
+	url = https://github.com/vim-scripts/calendar.vim--Matsumoto.git
