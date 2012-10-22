@@ -85,3 +85,6 @@
 [submodule "bundle/vim-calendar"]
 	path = bundle/vim-calendar
 	url = https://github.com/vim-scripts/calendar.vim--Matsumoto.git
+[submodule "wikifile"]
+	path = wikifile
+	url = https://github.com/justzero/wiki-web.git
