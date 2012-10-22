@@ -8,6 +8,8 @@ else
     set guifont=Droid\ Sans\ Mono:h18 " 字体设置
 endif
 
+colo colorblind
+
 " {{{ Win平台下窗口全屏组件 gvimfullscreen.dll
 " Alt + Enter 全屏切换
 " Shift + t 降低窗口透明度
