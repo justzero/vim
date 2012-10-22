@@ -57,6 +57,7 @@ set laststatus=2
 
 " undo dir
 if v:version >= 703
+  set colorcolumn=80,120	"显示right margin, 7.3+
   set undodir=$HOME/.vimundodir
   set undofile
 endif
@@ -71,5 +72,4 @@ set foldmethod=marker
 set	list		"显示不可见字符 默认的太不好看了
 "set listchars=tab:\|\ ,trail:.,extends:>,precedes:<
 set listchars=tab:\:\ ,trail:~,extends:>,precedes:<,nbsp:\.
-set colorcolumn=80,120	"显示right margin, 7.3+
 

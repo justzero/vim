@@ -17,16 +17,13 @@ snippet fn
 		${3}
 	};
 snippet cr
-	/** init private info
-	<%= begin %>
-	var _info_ = {
-		filename: '`expand("%")`',
-		author: 'ice_G',
-		createtime: '`strftime("%c")`',
-		func_info: '${1: some information about this module...}'
-	};
-	<%= end %>
-	*/
+	/**
+	 * init private info
+	 * filename: '`expand("%")`',
+	 * author: 'ice_G',
+	 * createtime: '`strftime("%c")`',
+	 * func_info: '${1: some information about this module...}'
+	 */
 snippet bind
 	$(${1:document}).delegate(${2:Query}, '${3:click}', function (e) {
 		${4:e.preventDefault();}
