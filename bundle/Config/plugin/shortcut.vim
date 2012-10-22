@@ -86,3 +86,5 @@ nmap <silent> <leader>fr :FufRenewCache<cr>
 " 自定义wiki -->> html 快捷键
 map <Leader><F4> :VimwikiAll2HTML<CR>
 map <F4> :Vimwiki2HTML<CR>
+
+map <leader>C :Calendar<cr>
