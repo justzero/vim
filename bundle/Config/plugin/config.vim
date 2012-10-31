@@ -57,7 +57,7 @@ set laststatus=2
 
 " undo dir
 if v:version >= 703
-  set colorcolumn=80,120	"显示right margin, 7.3+
+  set colorcolumn=80 "显示right margin, 7.3+
   set undodir=$HOME/.vimundodir
   set undofile
 endif

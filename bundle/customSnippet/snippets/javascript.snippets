@@ -1,5 +1,6 @@
 snippet def
 	define(function (require, exports) {
+		'use strict';
 		${1}
 	});
 snippet req
@@ -16,14 +17,17 @@ snippet fn
 	var ${1:} = function (${2:}) {
 		${3}
 	};
-snippet cr
-	/**
-	 * init private info
-	 * filename: '`expand("%")`',
-	 * author: 'ice_G',
-	 * createtime: '`strftime("%c")`',
-	 * func_info: '${1: some information about this module...}'
-	 */
+snippet cp
+	// @fileOverview: `expand("%")` @ `strftime("%c")` ${1: some information about this module...}
+	// @author: gongbing
+	
+	/*jshint browser: true, nomen: true, indent: 4, maxlen: 80, strict: true, curly: true */
+	/*global define: true, $: true */
+
+	// DEBUG MODE
+	/*jshint devel: true */
+
+	${2}
 snippet bind
 	$(${1:document}).delegate(${2:Query}, '${3:click}', function (e) {
 		${4:e.preventDefault();}
