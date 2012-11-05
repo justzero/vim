@@ -14,6 +14,10 @@ snippet hr
 snippet l
 	console.log(${1});
 snippet fn
+	// @method: $1
+	// @description: 
+	// @param: 
+	// @return: 
 	var ${1:} = function (${2:}) {
 		${3}
 	};
@@ -29,7 +33,8 @@ snippet cp
 
 	${2}
 snippet bind
-	$(${1:document}).delegate(${2:Query}, '${3:click}', function (e) {
-		${4:e.preventDefault();}
-		${5}
+	var $doc = $(document);
+	$doc.delegate(${1:Query}, '${2:click}', function (e) {
+		e.preventDefault();
+		${3}
 	});
