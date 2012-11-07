@@ -8,8 +8,6 @@ else
     set guifont=Droid\ Sans\ Mono:h18 " 字体设置
 endif
 
-colo colorblind
-
 " {{{ Win平台下窗口全屏组件 gvimfullscreen.dll
 " Alt + Enter 全屏切换
 " Shift + t 降低窗口透明度
@@ -25,7 +23,6 @@ if has('gui_running') && has('gui_win32') && has('libcall')
 
     let g:VimAlpha = 255
     function! SetAlpha(alpha)
-        echo('123')
         let g:VimAlpha = g:VimAlpha + a:alpha
         if g:VimAlpha < 100
             let g:VimAlpha = 100
@@ -59,3 +56,10 @@ if has('gui_running') && has('gui_win32') && has('libcall')
     au GUIEnter * call libcallnr(g:MyVimLib, 'SetAlpha', g:VimAlpha)
 endif
 " }}}
+
+"powerline{
+set guifont=PowerlineSymbols\ for\ Powerline
+set nocompatible
+set t_Co=256
+let g:Powerline_symbols='fancy'
+"}
