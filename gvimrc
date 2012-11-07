@@ -1,4 +1,5 @@
 set guioptions=                     " 无 gui 界面
+set t_Co=256
 if (has ("gui_win32"))
     au GUIEnter * simalt ~x         " 最大化启动
     set guifont=Consolas:h14:cANSI  " 字体设置
@@ -56,10 +57,3 @@ if has('gui_running') && has('gui_win32') && has('libcall')
     au GUIEnter * call libcallnr(g:MyVimLib, 'SetAlpha', g:VimAlpha)
 endif
 " }}}
-
-"powerline{
-set guifont=PowerlineSymbols\ for\ Powerline
-set nocompatible
-set t_Co=256
-let g:Powerline_symbols='fancy'
-"}
