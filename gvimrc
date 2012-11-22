@@ -16,7 +16,7 @@ endif
 " Shift + y 加大窗口透明度
 " Shift + r 切换Vim是否总在最前面显示
 if has('gui_running') && has('gui_win32') && has('libcall')
-    let g:MyVimLib = 'gvimfullscreen.dll'
+    let g:MyVimLib = $HOME.'\vimfiles\gvimfullscreen.dll'
     function! ToggleFullScreen()
         "let s:IsFullScreen = libcallnr("gvimfullscreen.dll", 'ToggleFullScreen', 0)
         "let s:IsFullScreen = libcallnr("gvimfullscreen.dll", 'ToggleFullScreen', 27 + 29*256 + 30*256*256)
