@@ -22,7 +22,8 @@ snippet fn
 		${3}
 	};
 snippet cp
-	// @fileOverview: `expand("%")` @ `strftime("%c")` ${1: some information about this module...}
+	// @fileOverview: `expand("%")` @ `strftime("%c")`
+	// @description: ${1: some information about this module...}
 	// @author: gongbing
 	
 	/*jshint browser: true, nomen: true, indent: 4, maxlen: 80, strict: true, curly: true */
@@ -38,3 +39,9 @@ snippet bind
 		e.preventDefault();
 		${3}
 	});
+snippet (fn
+	// @description: 
+	(function (${2:$}) {
+		'use strict';
+		${3:// to do something.}
+	}(${1:}));

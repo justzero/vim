@@ -57,7 +57,7 @@ nmap <F9> :call handy#ToggleSnipple()<CR>
 imap <silent> ii <esc>:w<cr>
 imap <silent> <C-h> <esc>i
 imap <silent> <C-l> <esc>la
-imap <silent> oo <esc>ko
+imap <silent> OO <esc>ko
 map <silent> <esc><esc> :close<cr>
 map <silent> <tab><tab> <C-w>w
 map <silent> <Leader><tab> :%s /\t/    /g<cr>
