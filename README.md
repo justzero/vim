@@ -21,8 +21,14 @@
 
 在 %HOME% 目录下执行
 
-    git clone git://github.com/perfectworks/vim.git %HOME%/.vim
-    cd %HOME%/.vim && install.bat
+    git clone git://github.com/perfectworks/vim.git %HOME%/vimfiles
+    copy vimrc ../_vimrc
+    copy gvimrc ../_gvimrc
+    cd %HOME%/vimfiles && install.bat
+
+## 安装字体 
+
+直接双击font/MONACO.TTF字库文件进行安装   
 
 ## 升级
 
