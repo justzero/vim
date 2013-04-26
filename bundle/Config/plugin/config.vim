@@ -73,3 +73,4 @@ set	list		"显示不可见字符 默认的太不好看了
 "set listchars=tab:\|\ ,trail:.,extends:>,precedes:<
 set listchars=tab:\:\ ,trail:~,extends:>,precedes:<,nbsp:\.
 
+let g:indentLine_color_term = 235

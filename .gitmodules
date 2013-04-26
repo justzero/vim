@@ -82,3 +82,9 @@
 [submodule "bundle/vim-calendar"]
 	path = bundle/vim-calendar
 	url = https://github.com/vim-scripts/calendar.vim--Matsumoto.git
+[submodule "bundle/vim-jade"]
+	path = bundle/vim-jade
+	url = git://github.com/digitaltoad/vim-jade.git
+[submodule "bundle/indentLine"]
+	path = bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine.git

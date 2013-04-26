@@ -25,7 +25,9 @@ snippet fn
 		${3}
 	};
 snippet cp
-	// @fileOverview: `expand("%")` @ `strftime("%c")`
+	// @fileOverview: `expand("%")`
+	// Date: `strftime("%Y-%b-%d")`
+	// Time: `strftime("%H:%M")`
 	// @description: ${1: some information about this module...}
 	// @author: gongbing
 	
@@ -34,11 +36,10 @@ snippet cp
 
 	${2}
 snippet bind
-	var $doc = $(document);
-	$doc.delegate(${1:Query}, '${2:click}', function (e) {
+	.delegate(${1:Query}, '${2:click}', function (e) {
 		e.preventDefault();
 		${3}
-	});
+	})
 snippet (fn
 	// @description: 
 	(function (${2:$}) {
