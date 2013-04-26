@@ -1,7 +1,10 @@
 snippet def
 	define(function (require, exports) {
 		'use strict';
-		${1}
+		App.builderModule('${1}', function (module) {
+			var $mod = module.$module;
+			${2:// some code . . .}
+		});
 	});
 snippet req
 	var ${1:} = require('${2}');
@@ -27,10 +30,7 @@ snippet cp
 	// @author: gongbing
 	
 	/*jshint browser: true, nomen: true, indent: 4, maxlen: 80, strict: true, curly: true */
-	/*global define: true, $: true, _: true */
-
-	// DEBUG MODE
-	/*jshint devel: true */
+	/*global define: true, $: true, _: true, App: true */
 
 	${2}
 snippet bind
