@@ -110,6 +110,7 @@
 * genutils 给 vim 添加一些函数库
 * molokai 配色
 * desertEx 配色
+* vim-gitgutter vim对git的增强，在vim中提供vim-diff标注
 
 ### 安装新插件
 

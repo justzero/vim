@@ -6,6 +6,13 @@ snippet def
 			${2:// some code . . .}
 		});
 	});
+
+snippet yddef
+	youdao.define(function (require, exports) {
+		'use strict';
+		${1:// some code . . .}
+	});
+
 snippet req
 	var ${1:} = require('${2}');
 snippet for for length
@@ -31,8 +38,8 @@ snippet cp
 	// @description: ${1: some information about this module...}
 	// @author: gongbing
 	
-	/*jshint browser: true, nomen: true, indent: 4, maxlen: 80, strict: true, curly: true */
-	/*global define: true, $: true, _: true, App: true */
+	/*jshint unused: false, eqnull: false, browser: true, nomen: true, indent: 4, maxlen: 80, strict: true, curly: true */
+	/*global define: true, $: true, _: true, youdao: true */
 
 	${2}
 snippet bind
