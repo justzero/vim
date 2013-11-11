@@ -14,7 +14,7 @@
 
 在 $HOME 目录下执行以下命令
 
-    git clone git://github.com/perfectworks/vim.git ~/.vim
+    git clone git://github.com/justzero/vim.git ~/.vim
     cd ~/.vim && ./install.sh
 
 ### Windows
