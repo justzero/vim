@@ -21,7 +21,7 @@
 
 在 %HOME% 目录下执行
 
-    git clone git://github.com/perfectworks/vim.git %HOME%/vimfiles
+    git clone git://github.com/justzero/vim.git %HOME%/vimfiles
     copy vimrc ../_vimrc
     copy gvimrc ../_gvimrc
     cd %HOME%/vimfiles && install.bat
